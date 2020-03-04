@@ -26,13 +26,13 @@ include "config.php";
 		$isValid = true;
 
 		// Check fields are empty or not
-		if($fname == '' || $rfid == ''){
+		if($tname == '' || $rfid == ''){
 			$isValid = false;
 			$error_message = "Please fill all fields.";
 		}
         
-			
-}
+    
+
 
 		// Insert records
 		if($isValid){
@@ -44,7 +44,8 @@ include "config.php";
 
 			$success_message = "welcome to blade runner.";
 		}
-	}
+    }
+	
 	?>
 </head>
 <body>

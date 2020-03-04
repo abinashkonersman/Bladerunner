@@ -21,14 +21,13 @@ include "config.php";
 
 	// Start game page for user
 	if(isset($_POST['btnsignup'])){
-		$tname = trim($_POST['tname']);
 		$rfid = trim($_POST['rfid']);
 		$isValid = true;
 
 		// Check fields are empty or not
 		if($rfid == ''){
 			$isValid = false;
-			$error_message = "Please fill all fields.";
+			$error_message = "Please scan your tag and submit to get your result.";
 		}
         
     
@@ -38,7 +37,7 @@ include "config.php";
 		if($isValid){
 			$createview = "";
 			$stmt = $con->prepare($createview);
-			$stmt->bind_param("ss",$tname,$rfid);
+			$stmt->bind_param("s",$rfid);
 			$stmt->execute();
 			$stmt->close();
 
@@ -86,12 +85,12 @@ include "config.php";
 				
                     
 					<div class="form-group">
-					    <label for="rfid">Punch your Tag:</label>
+					    <label for="rfid">Please Scan your Tag:</label>
 					    <input type="text" class="form-control" name="rfid" id="rfid" required="required" maxlength="80">
 					</div>
 					
 					
-					<button type="submit" name="btnsignup" class="btn btn-default">Start</button>
+					<button type="submit" name="btnsignup" class="btn btn-default">Exit</button>
 				</form>
 			</div>
 			

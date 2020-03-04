@@ -1,0 +1,6 @@
+CREATE TABLE `users` (
+  `uid` bigint(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `tname` varchar(50) NOT NULL,
+  `rfid` varchar(70) NOT NULL,
+  `timemodified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

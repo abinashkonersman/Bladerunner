@@ -35,7 +35,9 @@ include "config.php";
 
 		// Insert records
 		if($isValid){
-			$insertSQL = "INSERT INTO usa(rfid,answer,uid) values(?,?)";
+			$insertSQL = "UPDATE tutorials_tbl
+      SET tutorial_title="Learning JAVA"
+      WHERE tutorial_id=3'";
 			$stmt = $con->prepare($insertSQL);
 			$stmt->bind_param("ss",$rfid,$answer);
 			$stmt->execute();

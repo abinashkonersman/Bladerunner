@@ -4,7 +4,7 @@ include "config.php";
 <!DOCTYPE html>
 <html>
 <head>
-	<title>End Page for Game</title>
+	<title>Exit and result Page for Game</title>
 
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
